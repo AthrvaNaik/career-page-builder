@@ -5,8 +5,9 @@ TechStack used:
 
 Setup steps:
   create mongodb atlas account and cloudinary account
-  clone this repository
+  # clone this repository
   git clone https://github.com/AthrvaNaik/careers-page-builder.git
+  
   cd careers-page-builder
 
   Backend Setup:
@@ -52,4 +53,5 @@ Data:
   if above link doesnot work, use this: https://www.npoint.io/docs/8b7b42b35856a4b426ee
 
 Video preview of the project: https://drive.google.com/file/d/1uWQA2e0Oti3le8FwoumogEc2Iq-Q36Iq/view?usp=drive_link
+
 
