@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import useCompanyStore from '../store/companyStore';
-import useJobsStore from '../store/jobsStore';
+import useJobsStore from '../store/JobsStore';
 import JobCard from '../components/JobCard';
 import JobFilters from '../components/JobFilters';
 import LoadingSpinner from '../components/LoadingSpinner';
