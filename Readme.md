@@ -13,7 +13,7 @@ Setup steps:
     cd backend
     npm install
 
-  Create .env file with:
+    Create .env file with:
     NODE_ENV=development
     PORT=5000
     MONGO_URI=your_mongodb_connection_string
@@ -23,10 +23,10 @@ Setup steps:
     CLOUDINARY_API_SECRET=your_api_secret
     CORS_ORIGIN=http://localhost:3000 --> front end url
 
-  Create uploads folder
+    Create uploads folder
     mkdir uploads
     
-  Start backend
+    Start backend
     npm run dev
 
   Backend runs on http://localhost:5000
@@ -36,10 +36,10 @@ Setup steps:
     cd frontend
     npm install
 
-  Create .env file and add
-   VITE_API_URL=http://localhost:5000/api
+     Create .env file and add
+     VITE_API_URL=http://localhost:5000/api
 
-  Start frontend
+    Start frontend
     npm run dev
 
   Frontend runs on: http://localhost:3000
@@ -52,3 +52,4 @@ Data:
   if above link doesnot work, use this: https://www.npoint.io/docs/8b7b42b35856a4b426ee
 
 Video preview of the project: https://drive.google.com/file/d/1uWQA2e0Oti3le8FwoumogEc2Iq-Q36Iq/view?usp=drive_link
+
