@@ -12,6 +12,7 @@ How I Used AI
  Got clear explanations on how to connect the backend (Express + MongoDB) with the frontend (React).
  Received suggestions for icon usage (Lucide Icons), component hierarchy, and UI flow.
  Used Copilot and Blackbox AI for faster code generation, syntax correction, and debugging errors.
+ Used to solve the problem arised during hosting of the project.
 
 Learnings
  Understood the importance of state management in frontend development for handling dynamic UI updates.
