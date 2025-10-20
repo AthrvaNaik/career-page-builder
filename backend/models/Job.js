@@ -34,20 +34,20 @@ const JobSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Job requirements are required']
   },
-  salary: {
-    min: {
-      type: Number,
-      default: null
-    },
-    max: {
-      type: Number,
-      default: null
-    },
-    currency: {
-      type: String,
-      default: 'USD'
-    }
-  },
+  // salary: {
+  //   min: {
+  //     type: Number,
+  //     default: null
+  //   },
+  //   max: {
+  //     type: Number,
+  //     default: null
+  //   },
+  //   currency: {
+  //     type: String,
+  //     default: 'USD'
+  //   }
+  // },
   experienceLevel: {
     type: String,
     enum: ['Entry Level', 'Mid Level', 'Senior Level', 'Lead', 'Executive'],
@@ -61,10 +61,10 @@ const JobSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  expiryDate: {
-    type: Date,
-    default: null
-  }
+  // expiryDate: {
+  //   type: Date,
+  //   default: null
+  // }
 }, {
   timestamps: true
 });

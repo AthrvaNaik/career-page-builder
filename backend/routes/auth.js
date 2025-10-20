@@ -22,6 +22,7 @@ router.post('/register', async (req, res) => {
     
     const validationError = validateRegister(req.body);
     if (validationError) {
+      console.log(validationError);
       return res.status(400).json({ 
         success: false, 
         message: validationError 
@@ -228,49 +229,49 @@ router.get('/me', protect, async (req, res) => {
 
 // PUT /api/auth/change-password
 
-router.put('/change-password', protect, async (req, res) => {
-  try {
-    const { currentPassword, newPassword } = req.body;
+// router.put('/change-password', protect, async (req, res) => {
+//   try {
+//     const { currentPassword, newPassword } = req.body;
 
-    if (!currentPassword || !newPassword) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Please provide current and new password' 
-      });
-    }
+//     if (!currentPassword || !newPassword) {
+//       return res.status(400).json({ 
+//         success: false, 
+//         message: 'Please provide current and new password' 
+//       });
+//     }
 
-    if (newPassword.length < 6) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'New password must be at least 6 characters' 
-      });
-    }
+//     if (newPassword.length < 6) {
+//       return res.status(400).json({ 
+//         success: false, 
+//         message: 'New password must be at least 6 characters' 
+//       });
+//     }
 
-    const user = await User.findById(req.user._id).select('+password');
+//     const user = await User.findById(req.user._id).select('+password');
 
-    const isMatch = await user.matchPassword(currentPassword);
-    if (!isMatch) {
-      return res.status(401).json({ 
-        success: false, 
-        message: 'Current password is incorrect' 
-      });
-    }
+//     const isMatch = await user.matchPassword(currentPassword);
+//     if (!isMatch) {
+//       return res.status(401).json({ 
+//         success: false, 
+//         message: 'Current password is incorrect' 
+//       });
+//     }
 
-    user.password = newPassword;
-    await user.save();
+//     user.password = newPassword;
+//     await user.save();
 
-    res.json({
-      success: true,
-      message: 'Password changed successfully'
-    });
-  } catch (error) {
-    console.error('Change password error:', error);
-    res.status(500).json({ 
-      success: false, 
-      message: 'Server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
-    });
-  }
-});
+//     res.json({
+//       success: true,
+//       message: 'Password changed successfully'
+//     });
+//   } catch (error) {
+//     console.error('Change password error:', error);
+//     res.status(500).json({ 
+//       success: false, 
+//       message: 'Server error',
+//       error: process.env.NODE_ENV === 'development' ? error.message : undefined
+//     });
+//   }
+// });
 
 module.exports = router;
