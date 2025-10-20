@@ -204,16 +204,16 @@ export default function Dashboard() {
     }
   };
 
-  const handleToggleJob = async (jobId) => {
-    try {
-      await jobsAPI.toggleJob(slug, jobId);
-      setSaveMessage('✓ Job status updated!');
-      loadJobs();
-      setTimeout(() => setSaveMessage(''), 3000);
-    } catch (error) {
-      alert('Error toggling job status');
-    }
-  };
+  // const handleToggleJob = async (jobId) => {
+  //   try {
+  //     await jobsAPI.toggleJob(slug, jobId);
+  //     setSaveMessage('✓ Job status updated!');
+  //     loadJobs();
+  //     setTimeout(() => setSaveMessage(''), 3000);
+  //   } catch (error) {
+  //     alert('Error toggling job status');
+  //   }
+  // };
 
   if (loading) {
     return <LoadingSpinner text="Loading dashboard..." />;
@@ -498,7 +498,7 @@ export default function Dashboard() {
                         <p className="text-gray-700 line-clamp-2">{job.description}</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <button
+                        {/* <button
                           onClick={() => handleToggleJob(job._id)}
                           className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                           title={job.isActive ? 'Deactivate' : 'Activate'}
@@ -508,7 +508,7 @@ export default function Dashboard() {
                           ) : (
                             <ToggleLeft className="w-5 h-5 text-gray-400" />
                           )}
-                        </button>
+                        </button> */}
                         <button
                           onClick={() => openJobModal(job)}
                           className="p-2 hover:bg-blue-50 rounded-lg transition-colors"
