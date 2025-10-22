@@ -57,6 +57,7 @@ Video preview of the project: https://drive.google.com/file/d/1uWQA2e0Oti3le8Fwo
 
 the deployed link of the project: https://career-page-builder.vercel.app/
 
+Note: In the section of job management by the recruiter, the toggle button for active status of job (Not mandatory in the task) is giving error in the deployed website, I am trying to solve the problem, it will be solved and deployed asap.
 
 
 
